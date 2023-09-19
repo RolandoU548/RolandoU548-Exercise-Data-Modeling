@@ -59,13 +59,13 @@ class Favorites(Base):
     # Here we define columns for the table address.
     # Notice that each column is also a normal Python instance attribute.
     id = Column(Integer, primary_key=True)
-    user_id = Column(Integer, ForeignKey('user.id'))
+    user_id = Column(Integer, ForeignKey('users.id'))
     users = relationship(Users)
-    planet_id = Column(Integer, ForeignKey('planet.id'))
+    planet_id = Column(Integer, ForeignKey('planets.id'))
     planets = relationship(Planets)
-    character_id = Column(Integer, ForeignKey('character.id'))
+    character_id = Column(Integer, ForeignKey('characters.id'))
     characters = relationship(Characters)
-    vehicle_id = Column(Integer, ForeignKey('vehicle.id'))
+    vehicle_id = Column(Integer, ForeignKey('vehicles.id'))
     vehicles = relationship(Vehicles)
 
 ## Draw from SQLAlchemy base
